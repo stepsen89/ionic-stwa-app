@@ -20,7 +20,7 @@ export class StarshipsPage {
     }
 
 
-  onDetails(starship){
+  openDetails(starship){
     this.navCtrl.push('StarshipPage', {starship: starship})
   }
 }

@@ -12,26 +12,30 @@ import { FilmsPage } from '../pages/films/films';
 import { FilmPage } from '../pages/films/film/film';
 import { PeoplePage } from '../pages/people/people';
 import { StarshipsPage } from '../pages/starships/starships';
-import { CharacterPage } from '../pages/people/character/character';
 
 //Providers
 import { StarWarsServiceProvider } from '../providers/starwars-service/starwars-service';
 import { HttpModule } from '@angular/http';
+import { CharacterPageModule } from '../pages/people/character/character.module';
+import { PeoplePageModule } from '../pages/people/people.module';
+import { StarshipsPageModule } from '../pages/starships/starships.module';
+import { FilmsPageModule } from '../pages/films/films.module';
+import { FilmPageModule } from '../pages/films/film/film.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,
-    FilmsPage,
-    PeoplePage,
-    StarshipsPage,
-    FilmPage,
-    CharacterPage
+    TabsPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CharacterPageModule,
+    PeoplePageModule,
+    StarshipsPageModule,
+    FilmsPageModule,
+    FilmPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,9 +43,7 @@ import { HttpModule } from '@angular/http';
     TabsPage,
     FilmsPage,
     PeoplePage,
-    StarshipsPage,
-    FilmPage,
-    CharacterPage
+    StarshipsPage
   ],
   providers: [
     StatusBar,

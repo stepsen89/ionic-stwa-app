@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title> {{starship.name}} </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+      <ion-card padding>
+          <img src="http://data.junkee.com/wp-content/uploads/2013/06/Star-Wars-banner1.jpg"/>
+          <ion-card-content>
+            <ion-card-title>
+              <p> Model: </p>
+              {{ starship.model }}
+              </ion-card-title>
+            <p>
+              Manufacturer:
+              {{ starship.manufacturer }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>

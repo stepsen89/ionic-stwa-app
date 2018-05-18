@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <ion-card *ngFor="let film of (films | async)?.results">
+    <ion-card *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
         <img src="https://yt3.ggpht.com/a-/AJLlDp3AH9AWrI766sJZUrNo_pQWqRkJzJnz0R3QXA=s900-mo-c-c0xffffffff-rj-k-no"/>
         <ion-card-content>
           <ion-card-title>

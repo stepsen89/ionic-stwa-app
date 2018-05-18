@@ -21,7 +21,7 @@ export class FilmsPage {
     }
 
 
-  onDetails(film){
+  openDetails(film){
     this.navCtrl.push('FilmPage', {film: film})
   }
 }
