@@ -1,23 +1,27 @@
 <ion-header>
-
-    <ion-navbar>
-      <ion-title> People </ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+    <ion-buttons start menuToggle>
+      <button ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> People </ion-title>
+  </ion-navbar>
+</ion-header>
   
 
-  <ion-content padding>
-      <ion-card *ngFor="let character of (people | async)?.results" (click)="openDetails(character)">
-          <img src="https://yt3.ggpht.com/a-/AJLlDp3AH9AWrI766sJZUrNo_pQWqRkJzJnz0R3QXA=s900-mo-c-c0xffffffff-rj-k-no" heigth= "50%"/>
-          <ion-card-content>
-            <ion-card-title text-style="center">
-              {{ character.name }}
-              </ion-card-title>
-            <p>
-              {{ character.id }}
-            </p>
-          </ion-card-content>
-        </ion-card>
-  </ion-content>
+<ion-content padding>
+  <ion-card *ngFor="let character of (people | async)?.results" (click)="openDetails(character)">
+    <img src="https://yt3.ggpht.com/a-/AJLlDp3AH9AWrI766sJZUrNo_pQWqRkJzJnz0R3QXA=s900-mo-c-c0xffffffff-rj-k-no" heigth= "50%"/>
+    <ion-card-content>
+      <ion-card-title text-style="center">
+        {{ character.name }}
+        </ion-card-title>
+      <p>
+        {{ character.id }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
   
   

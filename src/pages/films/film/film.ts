@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
  
 @IonicPage()
 @Component({
@@ -11,7 +11,12 @@ export class FilmPage {
  
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams) {
+    public navParams: NavParams,
+    private menuCtrl: MenuController) {
     this.film = this.navParams.get('film');
+  }
+
+  onOpenMenu(){
+    this.menuCtrl.open();
   }
 }
