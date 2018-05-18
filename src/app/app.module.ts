@@ -9,7 +9,6 @@ import { MyApp } from './app.component';
 //Pages
 import { TabsPage } from '../pages/tabs/tabs';
 import { FilmsPage } from '../pages/films/films';
-import { FilmPage } from '../pages/films/film/film';
 import { PeoplePage } from '../pages/people/people';
 import { StarshipsPage } from '../pages/starships/starships';
 
