@@ -8,6 +8,7 @@ import { StarshipsPage } from '../pages/starships/starships';
 import { FilmsPage } from '../pages/films/films';
 import { PeoplePage } from '../pages/people/people';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SignupPage } from '../pages/signup/signup';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,6 +18,7 @@ export class MyApp {
   starshipsPage = StarshipsPage;
   filmsPage = FilmsPage;
   peoplePage = PeoplePage;
+  signupPage = SignupPage;
   @ViewChild('nav') nav: NavController;
 
   constructor(

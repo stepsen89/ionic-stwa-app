@@ -20,11 +20,13 @@ import { PeoplePageModule } from '../pages/people/people.module';
 import { StarshipsPageModule } from '../pages/starships/starships.module';
 import { FilmsPageModule } from '../pages/films/films.module';
 import { FilmPageModule } from '../pages/films/film/film.module';
+import { SignupPage } from '../pages/signup/signup';
 
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage
+    TabsPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { FilmPageModule } from '../pages/films/film/film.module';
     TabsPage,
     FilmsPage,
     PeoplePage,
-    StarshipsPage
+    StarshipsPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
