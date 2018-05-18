@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Films </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+xx {{ films }} xx
+
+
+<ion-content padding>
+    <p> test </p>
+    <ion-card *ngFor="let film of (films | async)?.results">
+        <img src="{{ film.image }}"/>
+        <ion-card-content>
+          <ion-card-title>
+            {{ film.title }}
+            </ion-card-title>
+          <p>
+            {{ film.opening_crawl }}
+          </p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>
+
