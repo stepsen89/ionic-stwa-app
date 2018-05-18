@@ -12,11 +12,11 @@ import { FilmsPage } from '../pages/films/films';
 import { FilmPage } from '../pages/films/film/film';
 import { PeoplePage } from '../pages/people/people';
 import { StarshipsPage } from '../pages/starships/starships';
+import { CharacterPage } from '../pages/people/character/character';
 
 //Providers
 import { StarWarsServiceProvider } from '../providers/starwars-service/starwars-service';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,12 +25,12 @@ import { HttpClientModule } from '@angular/common/http';
     FilmsPage,
     PeoplePage,
     StarshipsPage,
-    FilmPage
+    FilmPage,
+    CharacterPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -40,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FilmsPage,
     PeoplePage,
     StarshipsPage,
-    FilmPage
+    FilmPage,
+    CharacterPage
   ],
   providers: [
     StatusBar,

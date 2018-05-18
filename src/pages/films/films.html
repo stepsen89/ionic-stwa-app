@@ -1,18 +1,11 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title> Films </ion-title>
   </ion-navbar>
-
 </ion-header>
-
-xx {{ films }} xx
-
-
 <ion-content padding>
-    <p> test </p>
     <ion-card *ngFor="let film of (films | async)?.results">
-        <img src="{{ film.image }}"/>
+        <img src="https://yt3.ggpht.com/a-/AJLlDp3AH9AWrI766sJZUrNo_pQWqRkJzJnz0R3QXA=s900-mo-c-c0xffffffff-rj-k-no"/>
         <ion-card-content>
           <ion-card-title>
             {{ film.title }}

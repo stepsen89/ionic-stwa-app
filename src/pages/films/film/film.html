@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title> {{film.title}} </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+      <ion-card padding>
+          <img src="http://data.junkee.com/wp-content/uploads/2013/06/Star-Wars-banner1.jpg"/>
+          <ion-card-content>
+            <ion-card-title>
+              <p> Episode ID:</p>
+              {{ film.episode_id }}
+              </ion-card-title>
+            <p>
+              Release Date:
+              {{ film.release_date }}
+            </p>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>

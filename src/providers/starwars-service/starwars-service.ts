@@ -6,11 +6,11 @@ import { Http } from '@angular/http';
 @Injectable()
 export class StarWarsServiceProvider {
 
-  constructor(public http: HttpClient, private httph:Http) {}
+  constructor(private http:Http) {}
 
   //return films
   getFilms() {
-    return this.httph.get('https://swapi.co/api/films/?format=json').map(res => res.json());
+    return this.http.get('https://swapi.co/api/films/?format=json').map(res => res.json());
   }
 
   //return people
@@ -20,6 +20,6 @@ export class StarWarsServiceProvider {
 
   //return starships
   getStarships() {
-    return this.http.get('https://swapi.co/api/starship');
+    return this.http.get('https://swapi.co/api/starships/?format=json').map((res) => res.json());
   }
 }

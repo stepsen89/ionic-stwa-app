@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { StarWarsServiceProvider } from '../../providers/starwars-service/starwars-service';
+
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -7,12 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'people.html',
 })
 export class PeoplePage {
+  people: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(    
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public starWarsService: StarWarsServiceProvider) {
+      this.people = this.starWarsService.getPeople();
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PeoplePage');
+
+  openDetails(character){
+    this.navCtrl.push('CharacterPage', {character: character})
   }
 
 }
